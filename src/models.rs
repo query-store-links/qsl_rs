@@ -3,14 +3,15 @@ use serde::{Deserialize, Serialize};
 // ─── Request ─────────────────────────────────────────────────────────────────
 
 #[derive(Debug, Deserialize)]
-#[serde(rename_all = "PascalCase")]
+#[serde(rename_all = "camelCase")]
 pub struct ResolveAllRequest {
+    #[serde(alias = "ProductInput")]
     pub product_input: Option<String>,
-    #[serde(default = "default_locale")]
+    #[serde(default = "default_locale", alias = "Locale")]
     pub locale: String,
-    #[serde(default = "default_market")]
+    #[serde(default = "default_market", alias = "Market")]
     pub market: String,
-    #[serde(default = "default_id_type")]
+    #[serde(default = "default_id_type", alias = "IdentifierType")]
     pub identifier_type: String,
 }
 
