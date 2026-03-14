@@ -5,10 +5,10 @@ services:
       dockerfile: Dockerfile
     image: ghcr.io/query-store-links/qsl_rs:latest
     ports:
-      - "8080:8080"
+      - "5236:5236"
     environment:
       HOST: "0.0.0.0"
-      PORT: "8080"
+      PORT: "5236"
       ALLOWED_ORIGINS: "https://*.krnl64.win"
       # Uncomment for local development (allows localhost origins):
       # DEV: "true"

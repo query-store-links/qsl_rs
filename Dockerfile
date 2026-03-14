@@ -30,9 +30,9 @@ RUN apt-get update \
 WORKDIR /app
 COPY --from=builder /app/target/release/qsl_rs ./qsl_rs
 
-EXPOSE 8080
+EXPOSE 5236
 
 ENV HOST=0.0.0.0
-ENV PORT=8080
+ENV PORT=5236
 
 ENTRYPOINT ["./qsl_rs"]

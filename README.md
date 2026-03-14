@@ -62,7 +62,7 @@ Pull and run the pre-built image:
 
 ```sh
 docker run -d \
-  -p 8080:8080 \
+  -p 5236:5236 \
   -e ALLOWED_ORIGINS="https://*.yourdomain.com" \
   --restart unless-stopped \
   ghcr.io/query-store-links/qsl_rs:latest
@@ -86,7 +86,7 @@ Requirements: Rust 1.75+, OpenSSL dev headers.
 git clone https://github.com/query-store-links/qsl_rs.git
 cd qsl_rs
 cargo build --release
-./target/release/qsl_rs --host 0.0.0.0 --port 8080
+./target/release/qsl_rs --host 0.0.0.0 --port 5236
 ```
 
 ---
