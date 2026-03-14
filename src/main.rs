@@ -16,10 +16,10 @@ use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt, EnvFilte
 ///
 /// Resolves Microsoft Store product information and package download links.
 #[derive(Parser, Debug)]
-#[command(version, about, long_about = None, disable_help_flag = true)]
+#[command(version, about, long_about = None)]
 struct Args {
     /// Host address to listen on.
-    #[arg(short = 'h', long, default_value = "0.0.0.0", env = "HOST")]
+    #[arg(short = 'H', long, default_value = "0.0.0.0", env = "HOST")]
     host: String,
 
     /// Port to listen on.
@@ -39,10 +39,6 @@ struct Args {
     /// Log level filter (e.g. `error`, `warn`, `info`, `debug`, `trace`).
     #[arg(long, default_value = "info", env = "LOG_LEVEL")]
     log_level: String,
-
-    /// Print help information.
-    #[arg(long, action = clap::ArgAction::Help)]
-    help: bool,
 }
 
 #[tokio::main]

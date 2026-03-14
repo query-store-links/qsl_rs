@@ -97,7 +97,7 @@ All options can be set via CLI flags or environment variables:
 
 | Flag | Env | Default | Description |
 |---|---|---|---|
-| `-h, --host` | `HOST` | `0.0.0.0` | Bind address |
+| `-H, --host` | `HOST` | `0.0.0.0` | Bind address |
 | `-p, --port` | `PORT` | `5236` | Bind port |
 | `--allowed-origins` | `ALLOWED_ORIGINS` | `https://*.krnl64.win` | Comma-separated list of allowed CORS origins. Supports `*.example.com` wildcard subdomains. |
 | `--dev` | `DEV` | off | Allow loopback origins (`localhost`, `127.0.0.1`) — useful for local frontend development |
