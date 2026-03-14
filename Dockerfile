@@ -27,6 +27,10 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends ca-certificates libssl3 \
  && rm -rf /var/lib/apt/lists/*
 
+# Install custom CA certificates from certs/.
+COPY certs/ /usr/local/share/ca-certificates/
+RUN update-ca-certificates
+
 WORKDIR /app
 COPY --from=builder /app/target/release/qsl_rs ./qsl_rs
 
