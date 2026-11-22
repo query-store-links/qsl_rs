@@ -1,5 +1,8 @@
 # qsl_rs
 
+> [!IMPORTANT]
+> This repository is no longer maintained and is now archived. We recommend using [qsl-worker](https://github.com/query-store-links/qsl-worker) instead.
+
 Rust rewrite of [query-store-links](https://github.com/query-store-links/qsl) — a REST API that resolves Microsoft Store product info and direct package download links.
 
 Built with [storelib_rs](https://github.com/query-store-links/storelib_rs).
